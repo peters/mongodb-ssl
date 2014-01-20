@@ -11,9 +11,9 @@ You can download my prebuilt binaries from [Sourceforge](https://sourceforge.net
 
 1. Create a new folder on your disk called `mongodb-ssl`
 2. Download and extract [Winpcap 4.1.2 Developers pack](http://www.winpcap.org/devel.htm) into `mongodb-ssl\winpcap`
-3. git clone https://github.com/mongodb/mongo.git `mongodb-ssl\mongo`
-4. cd `mongodb-ssl\mongo` 
-5. git checkout r2.4.9
+3. `git clone https://github.com/mongodb/mongo.git mongodb-ssl\mongo`
+4. `cd mongodb-ssl\mongo` 
+5. `git checkout r2.4.9`
 
 # Downloading thirdparty dependencies
 
@@ -30,22 +30,22 @@ NB! You do not need a working Visual Studio 2010 CD-KEY after your trial expires
 
 1. Modify `mongodb-ssl\mongo\SConstruct` at line 287 and add the following entry to `env = Environment(`:
 
-    $ MSVC_USE_SCRIPT = "C:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\VC\\vcvarsall.bat",
+    $ `MSVC_USE_SCRIPT = "C:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\VC\\vcvarsall.bat",`
 
 2. Run the following line in a Visual Studio 2010 command prompt
 
-    $ scons all -j 8 --release --32 --ssl --win2008plus --extrapath="C:\OpenSSL-Win32"
+    $ `scons all -j 8 --release --32 --ssl --win2008plus --extrapath="C:\OpenSSL-Win32"`
 
-3. You shall see unicorns in `mongodb-ssl\mongo\build` folder.
+3. You shall see unicorns in `mongodb-ssl\mongo\build\win32\32\extrapath_C__OpenSSL-Win32\release\ssl\mongo` folder.
 
 # 64-bit build
 
 1. Modify `mongodb-ssl\mongo\SConstruct` at line 287 and add the following entry to `env = Environment(`:
 
-    $ MSVC_USE_SCRIPT = "C:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\VC\\bin\\amd64\\vcvars64.bat",
+    $ `MSVC_USE_SCRIPT = "C:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\VC\\bin\\amd64\\vcvars64.bat",`
 
 2. Run the following line in a Visual Studio 2010 command prompt
 
-    $ scons all -j 8 --release --64 --ssl --win2008plus --extrapath="C:\OpenSSL-Win64"
+    $ `scons all -j 8 --release --64 --ssl --win2008plus --extrapath="C:\OpenSSL-Win64"`
     
-3. You shall see unicorns in `mongodb-ssl\mongo\build` folder.
+3. You shall see unicorns in `mongodb-ssl\mongo\build\win32\64\extrapath_C__OpenSSL-Win64\release\ssl\mongo` folder.
