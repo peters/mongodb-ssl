@@ -7,6 +7,12 @@ This short tutorial teaches you how to do it.
 
 You can download my prebuilt binaries from [Sourceforge](https://sourceforge.net/projects/mongodbssl/) if you want to get started quickly. Binaries for both x86 and x64 are available starting from mongo 2.4.9.
 
+In order to run mongodb with ssl support on Windows Server 2008 R2 or newer the following prerequisites are required:
+
+* Visual C++ 2008 Redistributables ([32bit](http://www.microsoft.com/downloads/details.aspx?familyid=9B2DA534-3E03-4391-8A4D-074B9F2BC1BF) / [64bit](http://www.microsoft.com/downloads/details.aspx?familyid=bd2a6171-e2d6-4230-b809-9a8d7548c1b6))
+* Visual C++ 2010 Redistributables ([32bit](http://www.microsoft.com/en-us/download/details.aspx?id=8328) / [64bit](http://www.microsoft.com/en-us/download/details.aspx?id=13523))
+* Openssl 1.0.0.0L ([32bit](http://slproweb.com/download/Win32OpenSSL_Light-1_0_0l.exe) / [64bit](http://slproweb.com/download/Win64OpenSSL_Light-1_0_0l.exe))
+
 # Grabbing mongo sources
 
 1. Create a new folder on your disk called `mongodb-ssl`
@@ -49,9 +55,3 @@ NB! You do not need a working Visual Studio 2010 CD-KEY after your trial expires
     $ `scons all -j 8 --release --64 --ssl --win2008plus --extrapath="C:\OpenSSL-Win64"`
     
 3. You shall see unicorns in `mongodb-ssl\mongo\build\win32\64\extrapath_C__OpenSSL-Win64\release\ssl\mongo` folder.
-
-# Prerequisites - Windows Server 2008 and newer
-
-* Visual C++ 2008 Redistributables ([32bit](http://www.microsoft.com/downloads/details.aspx?familyid=9B2DA534-3E03-4391-8A4D-074B9F2BC1BF) / [64bit](http://www.microsoft.com/downloads/details.aspx?familyid=bd2a6171-e2d6-4230-b809-9a8d7548c1b6))
-* Visual C++ 2010 Redistributables ([32bit](http://www.microsoft.com/en-us/download/details.aspx?id=8328) / [64bit](http://www.microsoft.com/en-us/download/details.aspx?id=13523))
-* Openssl 1.0.0.0L ([32bit](http://slproweb.com/download/Win32OpenSSL_Light-1_0_0l.exe) / [64bit](http://slproweb.com/download/Win64OpenSSL_Light-1_0_0l.exe))
