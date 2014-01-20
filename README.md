@@ -1,6 +1,7 @@
-# Mongodb with openssl support on Windows.
+# Mongodb with openssl support
 
-Building mongodb with openssl support on Windows is not for the faint hearted. This short tutorial teaches you how to do it.
+Building mongodb with openssl support on Windows is not for the faint hearted. 
+This short tutorial teaches you how to do it.
 
 # Prebuilt binaries
 
