@@ -24,7 +24,7 @@ NB! You do not need a working Visual Studio 2010 CD-KEY after your trial expires
 * [Python 2.7](http://www.python.org/ftp/python/2.7.6/python-2.7.6.msi)
 * [Python for Windows extensions](http://sourceforge.net/projects/pywin32/files/pywin32/Build%20218/pywin32-218.win32-py2.7.exe/download)
 * [Scons 2.3.0](http://prdownloads.sourceforge.net/scons/scons-2.3.0-setup.exe)
-* Openssl 1.0.0.0L ([32bit](http://slproweb.com/download/Win32OpenSSL-1_0_1f.exe) / [64bit](http://slproweb.com/download/Win64OpenSSL-1_0_0l.exe))
+* Openssl 1.0.0.0L ([32bit](http://slproweb.com/download/Win32OpenSSL_Light-1_0_0l.exe) / [64bit](http://slproweb.com/download/Win64OpenSSL_Light-1_0_0l.exe))
 
 # 32-bit build
 
@@ -49,3 +49,9 @@ NB! You do not need a working Visual Studio 2010 CD-KEY after your trial expires
     $ `scons all -j 8 --release --64 --ssl --win2008plus --extrapath="C:\OpenSSL-Win64"`
     
 3. You shall see unicorns in `mongodb-ssl\mongo\build\win32\64\extrapath_C__OpenSSL-Win64\release\ssl\mongo` folder.
+
+# Prerequisites - Windows Server 2008 and newer
+
+* Visual C++ 2008 Redistributables ([32bit](http://www.microsoft.com/downloads/details.aspx?familyid=9B2DA534-3E03-4391-8A4D-074B9F2BC1BF) / [64bit](http://www.microsoft.com/downloads/details.aspx?familyid=bd2a6171-e2d6-4230-b809-9a8d7548c1b6))
+* Visual C++ 2010 Redistributables ([32bit](http://www.microsoft.com/en-us/download/details.aspx?id=8328) / [64bit](http://www.microsoft.com/en-us/download/details.aspx?id=13523))
+* Openssl 1.0.0.0L ([32bit](http://slproweb.com/download/Win32OpenSSL_Light-1_0_0l.exe) / [64bit](http://slproweb.com/download/Win64OpenSSL_Light-1_0_0l.exe))
