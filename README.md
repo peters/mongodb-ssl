@@ -35,13 +35,15 @@ NB! You do not need a working Visual Studio 2010 CD-KEY after your trial expires
 
 # 32-bit build
 
+**NB! Before you continue you need to change line 71 in `C:\OpenSSL-Win32\include\openssl\dtls1.h` from `winsock.h` to `winsock2.h` otherwise `mongosniffer.exe` will fail to compile.**
+
 1. Modify `mongodb-ssl\mongo\SConstruct` at line 287 and add the following entry to `env = Environment(`:
 
     $ `MSVC_USE_SCRIPT = "C:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\VC\\vcvarsall.bat",`
 
 2. Run the following line in a Visual Studio 2010 command prompt
 
-    $ `scons all -j 8 --release --32 --ssl --win2008plus --extrapath="C:\OpenSSL-Win32"`
+    $ `scons tools --release --32 --ssl --win2008plus --extrapath="C:\OpenSSL-Win32"`
 
 3. You shall see unicorns in `mongodb-ssl\mongo\build\win32\32\extrapath_C__OpenSSL-Win32\release\ssl\mongo` folder.
 
@@ -53,6 +55,6 @@ NB! You do not need a working Visual Studio 2010 CD-KEY after your trial expires
 
 2. Run the following line in a Visual Studio 2010 command prompt
 
-    $ `scons all -j 8 --release --64 --ssl --win2008plus --extrapath="C:\OpenSSL-Win64"`
+    $ `scons tools --release --64 --ssl --win2008plus --extrapath="C:\OpenSSL-Win64"`
     
 3. You shall see unicorns in `mongodb-ssl\mongo\build\win32\64\extrapath_C__OpenSSL-Win64\release\ssl\mongo` folder.
