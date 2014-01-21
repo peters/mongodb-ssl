@@ -45,7 +45,7 @@ NB! If the python installer does not do it for you, please remember to add `C:\P
 
 2. Run the following line in a Visual Studio 2010 command prompt
 
-    `scons tools --release --32 --ssl --win2008plus --extrapath="C:\OpenSSL-Win32"`
+    `scons all --release --32 --ssl --win2008plus --extrapath="C:\OpenSSL-Win32"`
 
 3. You shall see unicorns in `mongodb-ssl\mongo\build\win32\32\extrapath_C__OpenSSL-Win32\release\ssl\mongo` folder.
 
@@ -57,6 +57,6 @@ NB! If the python installer does not do it for you, please remember to add `C:\P
 
 2. Run the following line in a Visual Studio 2010 command prompt
 
-    `scons tools --release --64 --ssl --win2008plus --extrapath="C:\OpenSSL-Win64"`
+    `scons all --release --64 --ssl --win2008plus --extrapath="C:\OpenSSL-Win64"`
     
 3. You shall see unicorns in `mongodb-ssl\mongo\build\win32\64\extrapath_C__OpenSSL-Win64\release\ssl\mongo` folder.
